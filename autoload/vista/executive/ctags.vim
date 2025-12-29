@@ -224,7 +224,7 @@ else
 
   if has('win32')
     function! s:WrapCmd(cmd) abort
-      return &shell . ' ' . &shellcmdflag . ' ' . a:cmd
+      return 'cmd' . ' ' . '/c' . ' ' . a:cmd
     endfunction
   else
     function! s:WrapCmd(cmd) abort
